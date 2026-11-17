@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A lean, fast frontend for make.fun: the live bounty board, bounty pages, leaderboards and public profiles, read straight from make.fun's public API. No sign-in, no build step.">
+<title>make.fun bounties — lean frontend</title>
+<link rel="stylesheet" href="style.css">
+<script>window.__shotReady = false;</script>
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/">make.fun <span class="brand-tag">lean</span></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="#/">Bounty board</a>
+    <a href="#/pot">Biggest pots</a>
+    <a href="#/entries">Most entered</a>
+  </nav>
+  <form id="profile-form" class="lookup" role="search">
+    <label class="sr" for="handle-input">Find a public profile by handle</label>
+    <input id="handle-input" name="handle" type="search" placeholder="Profile handle, e.g. bright-quasar-38" autocomplete="off" spellcheck="false">
+    <button type="submit">Profile</button>
+  </form>
+</header>
+<main id="app" aria-live="polite"></main>
+<footer class="foot">
+  <p>An independent, open-source frontend for <a href="https://make.fun">make.fun</a>. It reads only the public API — no sign-in, no writes, no tracking — and every page here is a link you can share.</p>
+</footer>
+</body>
+</html>
